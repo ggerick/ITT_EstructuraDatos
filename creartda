@@ -1,0 +1,63 @@
+using System;
+
+namespace tda
+{
+    class MainClass
+    {
+        private int coe;
+        private int pot;
+        public int Coe
+        {
+            get
+            {
+                return this.coe;
+            }
+            set
+            {
+                this.coe = value;
+            }
+        }
+        public int Pot
+        {
+            get
+            {
+                return this.pot;
+            }
+            set
+            {
+                this.pot = value;
+            }
+        }
+        public void Mostrar(int coe, int pot)
+        {
+            Console.WriteLine("El resultado es : " + CalcularPot(coe, pot));
+        }
+
+
+        public double CalcularPot(int coe, int pot)
+        {
+
+            Console.Write("Ingresa el coeficiente: ");
+            coe = int.Parse(Console.ReadLine());
+            Console.Write("Ingresa la potencia: ");
+            pot = int.Parse(Console.ReadLine());
+
+
+
+
+            return (Math.Pow(coe, pot));
+        }
+
+
+
+
+
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Este prorgrama calcula un coeficiente ingresado por" +
+                              "el usuario a la potencia deseada");
+            Console.ReadKey();
+            Mostrar();
+        }
+    }
+}
